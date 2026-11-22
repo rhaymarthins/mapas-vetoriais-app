@@ -66,24 +66,24 @@ npx mapshaper CE_Municipios_2025.shp \
   -o precision=0.00001 municipios-ce.geojson format=geojson
 ```
 
-| Campo | Significado |
-|---|---|
-| `NM_MUN` | Nome do município |
-| `NM_RGI` | Região geográfica imediata |
+| Campo      | Significado                     |
+| ---------- | ------------------------------- |
+| `NM_MUN`   | Nome do município               |
+| `NM_RGI`   | Região geográfica imediata      |
 | `NM_RGINT` | Região geográfica intermediária |
-| `AREA_KM2` | Área em km² |
-| `CD_MUN` | Código IBGE do município |
+| `AREA_KM2` | Área em km²                     |
+| `CD_MUN`   | Código IBGE do município        |
 
 ### Pontos de interesse de Sobral (`sobral.geojson`)
 
 Desenhados no geojson.io e exportados em GeoJSON, já em **WGS 84**.
 
-| Campo | Significado |
-|---|---|
-| `NOME` | Nome do lugar |
-| `TIPO` | Tipo de geometria (Polígono, Linha ou Ponto) |
+| Campo       | Significado                                         |
+| ----------- | --------------------------------------------------- |
+| `NOME`      | Nome do lugar                                       |
+| `TIPO`      | Tipo de geometria (Polígono, Linha ou Ponto)        |
 | `CATEGORIA` | Classificação do lugar (Educação, Lazer, Comércio…) |
-| `DESCRICAO` | Descrição curta |
+| `DESCRICAO` | Descrição curta                                     |
 
 ## Como funciona
 
@@ -106,12 +106,6 @@ npm run dev
 ```
 
 Depois, abra http://localhost:3000 no navegador.
-
-## Deploy
-
-O projeto está publicado na [Vercel](https://vercel.com). A cada `git push` na branch `main`, uma nova versão é publicada automaticamente.
-
-**Link:** https://SEU-LINK.vercel.app
 
 ## Autor
 
