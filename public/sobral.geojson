@@ -1,0 +1,239 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "NOME": "UFC - Campus Sobral",
+                "TIPO": "Polígono",
+                "CATEGORIA": "Educação",
+                "DESCRICAO": "Universidade Federal do Ceará"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -40.356054,
+                            -3.692467
+                        ],
+                        [
+                            -40.355884,
+                            -3.693376
+                        ],
+                        [
+                            -40.355582,
+                            -3.694522
+                        ],
+                        [
+                            -40.35486,
+                            -3.694438
+                        ],
+                        [
+                            -40.354074,
+                            -3.694392
+                        ],
+                        [
+                            -40.353792,
+                            -3.694166
+                        ],
+                        [
+                            -40.354074,
+                            -3.692171
+                        ],
+                        [
+                            -40.355027,
+                            -3.692314
+                        ],
+                        [
+                            -40.356054,
+                            -3.692467
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NOME": "Sobral Shopping",
+                "TIPO": "Ponto",
+                "CATEGORIA": "Comércio",
+                "DESCRICAO": "Shopping de Sobral"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -40.348198,
+                    -3.697672
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NOME": "IFCE - Campus Sobral",
+                "TIPO": "Ponto",
+                "CATEGORIA": "Educação",
+                "DESCRICAO": "Instituto Federal do Ceará"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -40.340927,
+                    -3.683744
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NOME": "Parque Lagoa da Fazenda",
+                "TIPO": "Polígono",
+                "CATEGORIA": "Lazer",
+                "DESCRICAO": "Lazer e Esporte"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -40.347307,
+                            -3.681399
+                        ],
+                        [
+                            -40.346478,
+                            -3.68168
+                        ],
+                        [
+                            -40.346151,
+                            -3.682011
+                        ],
+                        [
+                            -40.345427,
+                            -3.682242
+                        ],
+                        [
+                            -40.345075,
+                            -3.682347
+                        ],
+                        [
+                            -40.344752,
+                            -3.682205
+                        ],
+                        [
+                            -40.34459,
+                            -3.681782
+                        ],
+                        [
+                            -40.344539,
+                            -3.681647
+                        ],
+                        [
+                            -40.34439,
+                            -3.681545
+                        ],
+                        [
+                            -40.344176,
+                            -3.681589
+                        ],
+                        [
+                            -40.343708,
+                            -3.681764
+                        ],
+                        [
+                            -40.343673,
+                            -3.681787
+                        ],
+                        [
+                            -40.343474,
+                            -3.681444
+                        ],
+                        [
+                            -40.342921,
+                            -3.680545
+                        ],
+                        [
+                            -40.342437,
+                            -3.679758
+                        ],
+                        [
+                            -40.341829,
+                            -3.678823
+                        ],
+                        [
+                            -40.342377,
+                            -3.678867
+                        ],
+                        [
+                            -40.342868,
+                            -3.678904
+                        ],
+                        [
+                            -40.343445,
+                            -3.678927
+                        ],
+                        [
+                            -40.344113,
+                            -3.67895
+                        ],
+                        [
+                            -40.34452,
+                            -3.678971
+                        ],
+                        [
+                            -40.344892,
+                            -3.679036
+                        ],
+                        [
+                            -40.347307,
+                            -3.681399
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NOME": "Boulevard do Arco",
+                "TIPO": "Linha",
+                "CATEGORIA": "Calçadão",
+                "DESCRICAO": "Espaço Urbano"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -40.345783,
+                        -3.687072
+                    ],
+                    [
+                        -40.344946,
+                        -3.686288
+                    ],
+                    [
+                        -40.344369,
+                        -3.685725
+                    ],
+                    [
+                        -40.343707,
+                        -3.685113
+                    ],
+                    [
+                        -40.343707,
+                        -3.685113
+                    ],
+                    [
+                        -40.343707,
+                        -3.685113
+                    ],
+                    [
+                        -40.343707,
+                        -3.685113
+                    ]
+                ]
+            }
+        }
+    ]
+}
