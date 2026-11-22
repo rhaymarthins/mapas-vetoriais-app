@@ -10,14 +10,25 @@ const MapaVetorial = dynamic(() => import("../components/MapaVetorial"), {
     loading: () => <p className={styles.instrucaoVazio}>Carregando o mapa...</p>,
 });
 
+// Um item da Tabela de Atributos (rótulo + valor)
+function Atributo({ rotulo, valor }) {
+    return (
+        <div className={styles.itemAtributo}>
+            <div className={styles.itemRotulo}>{rotulo}</div>
+            <div className={styles.itemValor}>{valor}</div>
+        </div>
+    );
+}
+
 export default function Home() {
+    // Guarda a feição tocada: { origem: "ibge" | "desenho", atributos: {...} }
     const [feicao, setFeicao] = useState(null);
 
     return (
         <main className={styles.container}>
             <header className={styles.cabecalho}>
                 <h1>Mapas Vetoriais e Tabela de Atributos</h1>
-                <p>Pontos de interesse de Sobral-CE desenhados no geojson.io</p>
+                <p>Municípios do Ceará (IBGE) e pontos de interesse de Sobral em GeoJSON</p>
             </header>
 
             <section className={styles.mapaWrapper}>
@@ -27,34 +38,34 @@ export default function Home() {
             <section className={styles.cardPainel}>
                 <h2 className={styles.cardTitulo}>Tabela de Atributos (properties)</h2>
 
-                {feicao ? (
+                {feicao?.origem === "ibge" && (
                     <div className={styles.gridAtributos}>
-                        <div className={styles.itemAtributo}>
-                            <div className={styles.itemRotulo}>Nome</div>
-                            <div className={styles.itemValor}>{feicao.NOME}</div>
-                        </div>
-                        <div className={styles.itemAtributo}>
-                            <div className={styles.itemRotulo}>Tipo de geometria</div>
-                            <div className={styles.itemValor}>{feicao.TIPO}</div>
-                        </div>
-                        <div className={styles.itemAtributo}>
-                            <div className={styles.itemRotulo}>Categoria</div>
-                            <div className={styles.itemValor}>{feicao.CATEGORIA}</div>
-                        </div>
-                        <div className={styles.itemAtributo}>
-                            <div className={styles.itemRotulo}>Descrição</div>
-                            <div className={styles.itemValor}>{feicao.DESCRICAO}</div>
-                        </div>
+                        <Atributo rotulo="Município" valor={feicao.atributos.NM_MUN} />
+                        <Atributo rotulo="Região imediata" valor={feicao.atributos.NM_RGI} />
+                        <Atributo rotulo="Região intermediária" valor={feicao.atributos.NM_RGINT} />
+                        <Atributo rotulo="Área" valor={`${feicao.atributos.AREA_KM2.toLocaleString("pt-BR")} km²`} />
+                        <Atributo rotulo="Código IBGE" valor={feicao.atributos.CD_MUN} />
                     </div>
-                ) : (
+                )}
+
+                {feicao?.origem === "desenho" && (
+                    <div className={styles.gridAtributos}>
+                        <Atributo rotulo="Nome" valor={feicao.atributos.NOME} />
+                        <Atributo rotulo="Tipo de geometria" valor={feicao.atributos.TIPO} />
+                        <Atributo rotulo="Categoria" valor={feicao.atributos.CATEGORIA} />
+                        <Atributo rotulo="Descrição" valor={feicao.atributos.DESCRICAO} />
+                    </div>
+                )}
+
+                {!feicao && (
                     <p className={styles.instrucaoVazio}>
-                        Toque ou clique em um desenho do mapa para consultar os atributos do GeoJSON.
+                        Toque ou clique em um município ou em um desenho para consultar os atributos do GeoJSON.
                     </p>
                 )}
             </section>
 
             <footer className={styles.rodape}>
-                SIG-Web, Prof. José Rui. Dados: desenhados no geojson.io (Sobral-CE).
+                SIG-Web, Prof. José Rui. Dados: IBGE, Malha Municipal 2025 (CE) e desenhos próprios no geojson.io.
             </footer>
         </main>
     );
